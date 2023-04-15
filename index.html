@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリッカーゲーム</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/7-1-11.css">
+</head>
+
+<body>
+
+    <h1>クリッカーゲーム</h1>
+    <p>クリック数: <span id="clicks">0</span></p>
+    <p>現在のクリックパワー: <span id="clickPower">1</span></p>
+    <p>現在のしぐしぐパワー: <span id="sigusiguPower">0</span></p>
+    <button id="clicker" class="btnripple" >クリック！</button>
+    <hr>
+
+    <p>BGM: <button id="bgmButton" class="btnripple">ONにする</button></p>
+
+    <p>BGM音量:
+        <input type="range" id="bgm_volume" min="0" max="1" step="0.1" value="0.5">
+        <span id="bgm_vol_range">0.5</span>
+    </p>
+    <p>SE音量:
+        <input type="range" id="se_volume" min="0" max="1" step="0.1" value="0.5">
+        <span id="se_vol_range">0.5</span>
+    </p>
+
+    <h>アイテムショップ</h>
+    <div class="item">
+        <p>1. クリックパワー (Lv <span id="item1Count">0</span>)</p>
+        <p>価格: <span id="item1Cost">10</span>ポイント クリックパワー + 5</p>
+        <button class="buyButton btnripple" id="buyItem1">アイテム1を購入</button>
+    </div>
+    <div class="item">
+        <p>2. クリックハイパワー (Lv <span id="item2Count">0</span>)</p>
+        <p>価格: <span id="item2Cost">100</span>ポイント クリックパワー + 50</p>
+        <button class="buyButton btnripple" id="buyItem2">アイテム2を購入</button>
+    </div>
+    <div class="item">
+        <p>3. クリックスーパーパワー (Lv <span id="item3Count">0</span>)</p>
+        <p>価格: <span id="item3Cost">1000</span>ポイント クリックパワー + 500</p>
+        <button class="buyButton btnripple" id="buyItem3">アイテム3を購入</button>
+    </div>
+    <body class="item">
+        <p>4. クリックパワー皇 (Lv <span id="item4Count">0</span>)</p>
+        <p>価格: <span id="item4Cost">10000</span>ポイント クリックパワー + 5000</p>
+        <button class="buyButton btnripple" id="buyItem4">アイテム4を購入</button>
+    <div class="item">
+        <p>5. しぐしぐ Lvを表示するとバグるから表示しないよ! </p>
+        <p>価格: <span id="human1Cost">100</span>ポイント しぐしぐパワー + 1</p>
+        <button class="buyButton btnripple" id="buyhuman1">しぐしぐを購入</button>
+    </div>
+    <div class="reset">
+        <p>今までのセーブデータを破棄します</p>
+        <button id="reset" class="btnripple">セーブデータ破棄</button>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
